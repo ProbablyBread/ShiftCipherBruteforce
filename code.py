@@ -10,11 +10,11 @@ def bruteforce(letter, rot):
     # capital letters are between 65 and 90
     elif ord(letter) >= 65 and ord(letter) <= 90:
         i = ord(letter) - 65 # subtract 65 so A = 0
-        return ((i - rot) % 26) + 65 # add back 65 to get ascii
+        return ((i - rot) % 26) + 65 # add back 65
     # lowercase letters are between 97 and 122
     elif ord(letter) >= 97 and ord(letter) <= 122:
         i = ord(letter) - 97 # subtract 97 so a = 0
-        return ((i - rot) % 26) + 97 # add back 97 to get ascii
+        return ((i - rot) % 26) + 97 # add back 97
 
 if len(sys.argv) < 2:
     print("Enter the ciphertext to be decoded as an argument.")
